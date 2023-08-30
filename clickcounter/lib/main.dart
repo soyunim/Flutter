@@ -13,21 +13,33 @@ class App extends StatefulWidget {
 
 class _AppState extends State<App> {
   int counter = 0;
+  bool reset = false;
 
   void onClick() {
     setState(() {
       counter = counter + 1;
+      if (counter == 10) {
+        resetCount();
+      }
     });
   }
 
   void resetCount() {
     setState(() {
       counter = 0;
+      reset = !reset;
     });
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    print("dispose");
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print("build");
     return MaterialApp(
       theme: ThemeData(
         textTheme: TextTheme(
@@ -43,21 +55,24 @@ class _AppState extends State<App> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const MyLargeTitle(text: "Click Count"),
+              reset
+                  ? const MyLargeTitle(text: "Finish!")
+                  : const MyLargeTitle(text: "Click Count!"),
               MyLargeTitle(text: "$counter"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  IconButton(
-                    onPressed: onClick,
-                    icon: const Icon(Icons.add_box),
-                    iconSize: 40,
-                  ),
-                  IconButton(
-                    onPressed: resetCount,
-                    icon: const Icon(Icons.refresh),
-                    iconSize: 40,
-                  ),
+                  reset
+                      ? IconButton(
+                          onPressed: resetCount,
+                          icon: const Icon(Icons.refresh),
+                          iconSize: 40,
+                        )
+                      : IconButton(
+                          onPressed: onClick,
+                          icon: const Icon(Icons.add_box),
+                          iconSize: 40,
+                        ),
                 ],
               ),
             ],
