@@ -8,7 +8,7 @@
 |출처|https://dribbble.com/shots/19858341-Financil-Mobile-iOS-App| |
 
 
-## 2. clickcounter
+## 2. clickcounter - StatefulWidget
 
 | 첫 화면 | 카운트 중 | 카운트 완료 | 리셋버튼 클릭 후 |
 |:-:|:-:|:-:|:-:|
