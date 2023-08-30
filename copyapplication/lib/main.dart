@@ -163,12 +163,14 @@ class App extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const Icon(
-                        Icons.euro,
-                        color: Colors.white,
-                        size: 90,
+                      Transform.scale(
+                        scale: 2,
+                        child: const Icon(
+                          Icons.euro,
+                          color: Colors.white,
+                          size: 90,
+                        ),
                       ),
-                      //icon
                     ],
                   ),
                 ),
