@@ -90,7 +90,7 @@ class App extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 100,
+                height: 80,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -124,6 +124,7 @@ class App extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(30),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,12 +156,17 @@ class App extends StatelessWidget {
                                 'EUR',
                                 style: TextStyle(
                                   color: Colors.white.withOpacity(0.8),
-                                  fontSize: 18,
+                                  fontSize: 15,
                                 ),
                               ),
                             ],
                           ),
                         ],
+                      ),
+                      const Icon(
+                        Icons.euro,
+                        color: Colors.white,
+                        size: 90,
                       ),
                       //icon
                     ],
