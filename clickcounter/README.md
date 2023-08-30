@@ -1,5 +1,11 @@
 # clickcounter
 
+## click counter
+
+| 첫 화면 | 카운트 중 | 카운트 완료 | 리셋버튼 클릭 후 |
+|:-:|:-:|:-:|:-:|
+| ![Alt text](image.png) | ![Alt text](image-1.png) | ![Alt text](image-2.png) | ![Alt text](image-3.png) |
+
 A new Flutter project.
 
 ## Getting Started

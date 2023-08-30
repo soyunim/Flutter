@@ -19,7 +19,7 @@ class _AppState extends State<App> {
     setState(() {
       counter = counter + 1;
       if (counter == 10) {
-        resetCount();
+        reset = !reset;
       }
     });
   }
@@ -32,14 +32,7 @@ class _AppState extends State<App> {
   }
 
   @override
-  void dispose() {
-    super.dispose();
-    print("dispose");
-  }
-
-  @override
   Widget build(BuildContext context) {
-    print("build");
     return MaterialApp(
       theme: ThemeData(
         textTheme: TextTheme(
