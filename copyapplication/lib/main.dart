@@ -14,7 +14,10 @@ class App extends StatelessWidget {
         backgroundColor: const Color(0xFF181818),
         //Color.fromAGRB(255,1,1,1)
         body: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 30,
+          ),
+          //EdgeInsets.all(..)
           //EdgeInsets.only(right left ...),
           //EdgeInsets.symmetric(horizontal:30),
           child: Column(
@@ -49,7 +52,7 @@ class App extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 120,
+                height: 20,
               ),
               Text(
                 'Total Balance',
@@ -73,6 +76,7 @@ class App extends StatelessWidget {
                 height: 20,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     decoration: BoxDecoration(
@@ -82,12 +86,31 @@ class App extends StatelessWidget {
                     child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
-                        horizontal: 40,
+                        horizontal: 45,
                       ),
                       child: Text(
                         'Transfer',
                         style: TextStyle(
                           fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF1f2123),
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 45,
+                      ),
+                      child: Text(
+                        'Request',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
                         ),
                       ),
                     ),
