@@ -20,5 +20,5 @@ samples, guidance on mobile development, and a full API reference.
 
 | | Original App | Copy App |
 |:-:|:-:|:-:|
-|Image|![Alt text](image.png)| |
+|Image|![Alt text](image.png)| ![Alt text](image-1.png) |
 |출처|https://dribbble.com/shots/19858341-Financil-Mobile-iOS-App| |
