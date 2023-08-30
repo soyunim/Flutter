@@ -24,10 +24,10 @@ class CurrencyCard extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
         color: isInverted ? Colors.white : _blackColor,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(35),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(50),
+        padding: const EdgeInsets.all(30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
