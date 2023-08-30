@@ -29,24 +29,22 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            color: Colors.blueGrey.shade900,
+            fontSize: 30,
+          ),
+        ),
+      ),
       home: Scaffold(
         backgroundColor: Colors.amber.shade200,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Click Count',
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
-              Text(
-                '$counter',
-                style: const TextStyle(
-                  fontSize: 30,
-                ),
-              ),
+              const MyLargeTitle(text: "Click Count"),
+              MyLargeTitle(text: "$counter"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -65,6 +63,26 @@ class _AppState extends State<App> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class MyLargeTitle extends StatelessWidget {
+  final String text;
+
+  const MyLargeTitle({
+    super.key,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: Theme.of(context).textTheme.titleLarge?.fontSize,
+        color: Theme.of(context).textTheme.titleLarge?.color,
       ),
     );
   }
