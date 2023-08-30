@@ -27,7 +27,7 @@ class CurrencyCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(50),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
