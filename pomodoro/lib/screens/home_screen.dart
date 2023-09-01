@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         if (totalRound == 4) {
           totalGoal = totalGoal + 1;
           totalRound = 0;
-          totalSeconds = 300;
+          totalSeconds = 1500;
           isWaitingTime = true;
           isRunning = false;
           onStartPressed();
