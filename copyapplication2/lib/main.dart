@@ -1,77 +1,61 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: const Color(0xFF181818),
         body: Padding(
-          padding: EdgeInsets.only(
-            top: 60,
-            left: 10,
-            right: 10,
-          ),
+          padding: const EdgeInsets.all(10),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    alignment: Alignment.center,
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 20,
-                      ),
-                      child: Text('hi'),
-                    ),
-                    margin: EdgeInsets.only(bottom: 20),
-                  ),
-                  Text(
-                    '+',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 60,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
+              const SizedBox(
+                height: 60,
               ),
-              Row(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'MONDAY 16',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text(
-                        'TODAY',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 50,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+              Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'MONDAY 16',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'TODAY',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 50,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Container(
+                child: const Row(),
               ),
               Row(
                 children: [
@@ -83,14 +67,15 @@ class App extends StatelessWidget {
                       color: Colors.yellow,
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    child: Padding(
+                    margin: const EdgeInsets.only(top: 10),
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 10,
                         horizontal: 20,
                       ),
                       child: Row(
                         children: [
-                          Container(
+                          SizedBox(
                             height: 150,
                             width: 60,
                             child: Column(
@@ -138,7 +123,7 @@ class App extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                          SizedBox(
                               height: 150,
                               width: 310,
                               child: Column(
@@ -178,7 +163,6 @@ class App extends StatelessWidget {
                         ],
                       ),
                     ),
-                    margin: EdgeInsets.only(top: 10),
                   ),
                 ],
               ),
@@ -192,14 +176,15 @@ class App extends StatelessWidget {
                       color: Colors.purple.shade200,
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    child: Padding(
+                    margin: const EdgeInsets.only(top: 10),
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 10,
                         horizontal: 20,
                       ),
                       child: Row(
                         children: [
-                          Container(
+                          SizedBox(
                             height: 150,
                             width: 60,
                             child: Column(
@@ -247,7 +232,7 @@ class App extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                          SizedBox(
                               height: 150,
                               width: 310,
                               child: Column(
@@ -288,7 +273,6 @@ class App extends StatelessWidget {
                         ],
                       ),
                     ),
-                    margin: EdgeInsets.only(top: 10),
                   ),
                 ],
               ),
@@ -302,14 +286,15 @@ class App extends StatelessWidget {
                       color: Colors.lightGreen,
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    child: Padding(
+                    margin: const EdgeInsets.only(top: 10),
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 10,
                         horizontal: 20,
                       ),
                       child: Row(
                         children: [
-                          Container(
+                          SizedBox(
                             height: 150,
                             width: 60,
                             child: Column(
@@ -357,7 +342,7 @@ class App extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                          SizedBox(
                               height: 150,
                               width: 310,
                               child: Column(
@@ -397,7 +382,6 @@ class App extends StatelessWidget {
                         ],
                       ),
                     ),
-                    margin: EdgeInsets.only(top: 10),
                   ),
                 ],
               ),
