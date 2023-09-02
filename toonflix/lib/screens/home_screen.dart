@@ -27,22 +27,33 @@ class HomeScreen extends StatelessWidget {
         future: webtoons,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemCount: snapshot.data!.length,
-              itemBuilder: (context, index) {
-                var webtoon = snapshot.data![index];
-                return Text(webtoon.title);
-              },
-              separatorBuilder: (context, index) => const SizedBox(
-                width: 20,
-              ),
-            );
+            return makeList(snapshot);
           }
           return const Center(
             child: CircularProgressIndicator(),
           );
         },
+      ),
+    );
+  }
+}
+
+class makeList extends StatelessWidget {
+  const makeList({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      scrollDirection: Axis.horizontal,
+      itemCount: snapshot.data!.length,
+      itemBuilder: (context, index) {
+        var webtoon = snapshot.data![index];
+        return Text(webtoon.title);
+      },
+      separatorBuilder: (context, index) => const SizedBox(
+        width: 20,
       ),
     );
   }
