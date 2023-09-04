@@ -43,17 +43,17 @@ class _DetailScreenState extends State<DetailScreen> {
           ),
         ),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
         children: [
-          Hero(
-            tag: widget.id,
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 40,
-                ),
-                Container(
+          const SizedBox(
+            height: 50,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Hero(
+                tag: widget.id,
+                child: Container(
                   width: 200,
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
@@ -74,8 +74,40 @@ class _DetailScreenState extends State<DetailScreen> {
                     },
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          FutureBuilder(
+            future: webtoon,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 50,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        '${snapshot.data!.genre} / ${snapshot.data!.age}',
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(snapshot.data!.about,
+                          style: const TextStyle(
+                            fontSize: 17,
+                          )),
+                    ],
+                  ),
+                );
+              }
+              return const Text('...');
+            },
           ),
         ],
       ),
